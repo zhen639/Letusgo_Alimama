@@ -2,9 +2,11 @@ $(document).ready(function () {
     var feature = (function () {
         var initItems = function () {
             var items = loadAllItems();
+            var index=0;
 
             _(items).each(function (item) {
-                var addCart = '<button id="addToCart">加入购物车</button>';
+                index++;
+                var addCart = '<button id="btn_addCart" name="btn_cart" onclick="addItemToCart(this);">加入购物车</button>';
                 var listItem = $('<tr>\
                             <td>' + item.name + '</td>\
                             <td>' + item.price + '</td>\
@@ -27,14 +29,6 @@ $(document).ready(function () {
 
     feature.init();
     feature.printDate();
-
-    $('#addToCart').click(function() {
-        var currValue= getCookie("itemSum");
-        currValue++;
-        $("#count").text(currValue);
-        setCookie("itemSum",currValue);
-    });
-
     $("#count").text(getCookie('itemSum'));
 });
 

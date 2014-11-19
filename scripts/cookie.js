@@ -20,3 +20,14 @@ function delCookie(name) {
     if(cval!=null)
         document.cookie= name + "="+cval+";expires="+exp.toGMTString();
 }
+
+function addItemToCart(button) {
+    var currValue= getCookie("itemSum");
+    currValue++;
+    $("#count").text(currValue);
+    setCookie("itemSum",currValue);
+}
+
+function confirm(){
+    setCookie("itemSum","0");
+}
