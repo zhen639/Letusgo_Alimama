@@ -4,7 +4,7 @@ $(document).ready(function () {
             var items = loadAllItems();
 
             _(items).each(function (item) {
-                var addCart = '<button>加入购物车</button>';
+                var addCart = '<button id="addToCart">加入购物车</button>';
                 var listItem = $('<tr>\
                             <td>' + item.name + '</td>\
                             <td>' + item.price + '</td>\
@@ -27,5 +27,14 @@ $(document).ready(function () {
 
     feature.init();
     feature.printDate();
+
+    $('#addToCart').click(function() {
+        var currValue= getCookie("itemSum");
+        currValue++;
+        $("#count").text(currValue);
+        setCookie("itemSum",currValue);
+    });
+
+    $("#count").text(getCookie('itemSum'));
 });
 
