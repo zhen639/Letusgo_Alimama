@@ -19,4 +19,24 @@ function loadPromotions() {
     ]
 }
 
+function loadButtonArr() {
+    return [
+        '<button id="btn_addCart0" name="btd_cart" onclick="addItemToCart(this);">加入购物车</button>',
+        '<button id="btn_addCart1" name="btd_cart" onclick="addItemToCart(this);">加入购物车</button>',
+        '<button id="btn_addCart2" name="btd_cart" onclick="addItemToCart(this);">加入购物车</button>',
+        '<button id="btn_addCart3" name="btd_cart" onclick="addItemToCart(this);">加入购物车</button>',
+        '<button id="btn_addCart4" name="btd_cart" onclick="addItemToCart(this);">加入购物车</button>',
+        '<button id="btn_addCart5" name="btd_cart" onclick="addItemToCart(this);">加入购物车</button>',
+    ];
+}
 
+function loadAllCookies() {
+    return [
+        new Cookie('item0',0,0),
+        new Cookie('item1',0,1),
+        new Cookie('item2',0,2),
+        new Cookie('item3',0,3),
+        new Cookie('item4',0,4),
+        new Cookie('item5',0,5),
+    ];
+}

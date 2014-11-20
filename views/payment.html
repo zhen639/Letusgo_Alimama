@@ -22,7 +22,7 @@
 <div>
     <h4>购物清单</h4>
     <div id="pay-date"></div>
-    <table>
+    <table id="items-in-cart">
       <thead>
       <tr>
         <th>名称</th>
@@ -32,26 +32,10 @@
         <th>小计</th>
       </tr>
       </thead>
-      <tbody>
-      <tr>
-        <td>可口可乐</td>
-        <td>3</td>
-        <td>瓶</td>
-        <td>1</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>雪碧</td>
-        <td>3</td>
-        <td>瓶</td>
-        <td>1</td>
-        <td>3</td>
-      </tr>
-      </tbody>
     </table>
 
     <h4>赠送商品</h4>
-    <table>
+    <table id="promotion-items">
       <thead>
       <tr>
         <th>分类</th>
@@ -59,14 +43,12 @@
         <th>数量</th>
       </tr>
       </thead>
-      <tbody>
-      </tbody>
     </table>
 
     <div>
-      <p>总计：<span>0.00元</span></p>
-      <p>节约：<span>0.00元</span></p>
-      <a href="items.html" onclick="confirm();">确认</a>
+      <p>总计：<span id="total-price"></span></p>
+      <p>节约：<span id="save-price"></span></p>
+      <a href="items.html" onclick="clearCookies();">确认</a>
     </div>
 </div>
 
@@ -76,8 +58,9 @@
 <script type="text/javascript" src="../spec/fixtures.js"></script>
 <script type="text/javascript" src="../scripts/model/item.js"></script>
 <script type="text/javascript" src="../scripts/model/promotion.js"></script>
+<script type="text/javascript" src="../scripts/model/cookie.js"></script>
 <script type="text/javascript" src="../scripts/utils.js"></script>
-<script type="text/javascript" src="../scripts/cookie.js"></script>
+<script type="text/javascript" src="../scripts/cookie-function.js"></script>
 <script type="text/javascript" src="../scripts/main.js"></script>
 
 </body>
