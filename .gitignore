@@ -1,1 +1,7 @@
 # Created by .gitignore support plugin (hsz.mobi)
+#过滤文件
+#*.iml
+Letusgo_Alimama.iml
+
+#过滤文件夹
+.idea/
